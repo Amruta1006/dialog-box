@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Dialog</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <img src="header.png" class="img-header" alt="Coding" />
+      <div>
+        <h1 class="header-text">About Our Yoga Classes🧘🧘‍♂️</h1>
+        <img src="qr-code.png" class="img-qr" alt="QR Code" />
+        <p class="qr-description">
+          Online yoga classes daily on zoom for better health, weight loss,<br>
+          digestive issues and for many other health issues.
+        </p>
+      </div>
+    </div>
+
+    <button type="button" class="btn" onclick="openModal()">Enroll Now</button>
+
+    <div class="overlay" id="overlay">
+      <div class="modal">
+        <img src="close.png" class="close-icon" alt="Close" onclick="closeModal()" />
+        <form class="form">
+          <h1 class="form-header">Enroll Now</h1>
+
+          <input type="text" placeholder="Enter your name" class="form-input" />
+
+          <input type="email" placeholder="Enter your email" class="form-input" />
+
+          <input type="text" placeholder="Enter your phone number" class="form-input"/>
+
+          <input type="text" placeholder="Enter your age" class="form-input" />
+        </form>
+        <button type="button" class="btn">Book Your Seat</button>
+      </div>
+    </div>
+
+
+<script>
+      function openModal(){
+    const overlayElement = document.getElementById('overlay');
+    overlayElement.style.display = 'flex';
+  }
+  
+  function closeModal() {
+    const overlayElement = document.getElementById("overlay");
+    overlayElement.style.display = "none";
+  }
+</script>
+</body>
+</html>
